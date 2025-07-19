@@ -1,0 +1,23 @@
+name: Shiva's Welcome Bot 🤖
+
+on: [push]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+
+      - name: Welcome Message
+        run: echo "👋 Hello Shiva! Your CI workflow is alive and working!"
+
+      - name: Print Current Date
+        run: date
+
+      - name: Show System Info
+        run: uname -a
+
+      - name: List Project Files
+        run: ls -la
